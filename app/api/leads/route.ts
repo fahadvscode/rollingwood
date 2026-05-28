@@ -17,11 +17,8 @@ export async function POST(request: Request) {
     const supabase = createAdminClient()
     const row = toRollingwoodLeadRow(parsed.data)
 
-    const { data, error } = await supabase
-      .from("rollingwood_leads")
-      .insert(row)
-      .select("id")
-      .single()
+    // Do not .select() after insert — anon role has insert-only RLS, not select.
+    const { error } = await supabase.from("rollingwood_leads").insert(row)
 
     if (error) {
       console.error("rollingwood_leads insert:", error)
@@ -31,7 +28,7 @@ export async function POST(request: Request) {
       )
     }
 
-    return NextResponse.json({ success: true, id: data.id }, { status: 201 })
+    return NextResponse.json({ success: true }, { status: 201 })
   } catch (err) {
     console.error("leads API:", err)
     return NextResponse.json(

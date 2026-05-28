@@ -20,6 +20,13 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   title: 'Rollingwood Townhomes — New Freehold Townhomes by Regency Property in Brampton',
   description: 'Rollingwood Townhomes is a new pre-construction freehold townhouse community by Regency Property at 150 Rollingwood Drive, Brampton. 118 townhomes in 6 models from $600,000s. Classic 3-storey (1,325-1,403 sq ft) and Signature 4-storey (1,861-1,971 sq ft) collections. Occupancy 2027-2028.',
   keywords: ['Rollingwood Townhomes', 'Brampton townhomes', 'pre-construction townhomes Brampton', 'Regency Property', 'freehold townhomes Brampton', 'new townhomes Brampton 2027', 'Fletcher Creek South townhomes'],
