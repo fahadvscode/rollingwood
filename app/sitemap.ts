@@ -1,50 +1,58 @@
 import type { MetadataRoute } from "next"
+import { siteUrl } from "@/lib/site"
+
+const floorPlanSlugs = [
+  "haven",
+  "laguna-b",
+  "crown-b",
+  "everwood",
+  "laguna-a",
+  "crown-a",
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rollingwoodtownhomes.com"
-  
-  const floorPlanSlugs = ["haven", "laguna-b", "crown-b", "everwood", "laguna-a", "crown-a"]
-  
+  const lastModified = new Date()
+
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: siteUrl,
+      lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/floor-plans`,
-      lastModified: new Date(),
+      url: `${siteUrl}/floor-plans`,
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     ...floorPlanSlugs.map((slug) => ({
-      url: `${baseUrl}/floor-plans/${slug}`,
-      lastModified: new Date(),
+      url: `${siteUrl}/floor-plans/${slug}`,
+      lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
     {
-      url: `${baseUrl}/location`,
-      lastModified: new Date(),
+      url: `${siteUrl}/location`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/neighbourhood`,
-      lastModified: new Date(),
+      url: `${siteUrl}/neighbourhood`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      url: `${siteUrl}/faq`,
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/register`,
-      lastModified: new Date(),
+      url: `${siteUrl}/register`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },

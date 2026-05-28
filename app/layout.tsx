@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { images } from '@/lib/images'
+import { siteUrl } from '@/lib/site'
 
 const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Rollingwood Townhomes — New Freehold Townhomes by Regency Property in Brampton',
   description: 'Rollingwood Townhomes is a new pre-construction freehold townhouse community by Regency Property at 150 Rollingwood Drive, Brampton. 118 townhomes in 6 models from $600,000s. Classic 3-storey (1,325-1,403 sq ft) and Signature 4-storey (1,861-1,971 sq ft) collections. Occupancy 2027-2028.',
   keywords: ['Rollingwood Townhomes', 'Brampton townhomes', 'pre-construction townhomes Brampton', 'Regency Property', 'freehold townhomes Brampton', 'new townhomes Brampton 2027', 'Fletcher Creek South townhomes'],
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_CA',
-    url: 'https://rollingwoodtownhomes.ca',
+    url: siteUrl,
     siteName: 'Rollingwood Townhomes',
     title: 'Rollingwood Townhomes — New Freehold Townhomes by Regency Property in Brampton',
     description: '118 new freehold townhomes at 150 Rollingwood Drive, Brampton. 6 models from $600,000s. 3-storey Classic & 4-storey Signature collections. Occupancy 2027-2028.',
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
     images: [images.og],
   },
   alternates: {
-    canonical: 'https://rollingwoodtownhomes.ca',
+    canonical: siteUrl,
   },
   other: {
     'geo.region': 'CA-ON',
@@ -81,7 +83,7 @@ const jsonLd = {
   "name": "Rollingwood Townhomes",
   "alternateName": "Rolling Woods Townhomes",
   "description": "118 new pre-construction freehold townhomes by Regency Property at 150 Rollingwood Drive, Brampton. 6 models from $600,000s across Classic 3-storey and Signature 4-storey collections.",
-  "url": "https://rollingwoodtownhomes.ca",
+  "url": siteUrl,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "150 Rollingwood Drive",
