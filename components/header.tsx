@@ -24,13 +24,16 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center rounded-sm py-2 pl-2 pr-3 sm:py-2.5 sm:pl-3 sm:pr-4"
+          >
             <Image
               src={images.logo}
               alt="Rollingwood Townhomes"
               width={180}
               height={50}
-              className="h-12 w-auto"
+              className="h-10 w-auto sm:h-11"
             />
           </Link>
 

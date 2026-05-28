@@ -25,25 +25,27 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
+            <div className="mb-6 inline-block rounded-sm p-3 -ml-3">
               <Image
                 src={images.logoFooter}
                 alt="Rollingwood Townhomes"
                 width={160}
                 height={45}
-                className="h-10 w-auto mb-4"
+                className="h-10 w-auto"
               />
             </div>
             <p className="font-sans text-sm text-primary-foreground/80 leading-relaxed mb-6">
               New freehold townhomes by Regency Property at 150 Rollingwood Drive, Brampton. From the $600,000s.
             </p>
-            <Image
-              src={images.regency}
-              alt="Regency Property"
-              width={100}
-              height={30}
-              className="h-6 w-auto opacity-70"
-            />
+            <div className="inline-block rounded-sm p-2 -ml-2">
+              <Image
+                src={images.regency}
+                alt="Regency Property"
+                width={100}
+                height={30}
+                className="h-6 w-auto opacity-70"
+              />
+            </div>
           </div>
 
           {/* Project Links */}
