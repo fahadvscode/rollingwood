@@ -7,13 +7,13 @@ import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { images } from "@/lib/images"
 
-const navigation = [
+const navigation: { name: string; href: string; highlight?: boolean }[] = [
   { name: "Home", href: "/" },
   { name: "Floor Plans", href: "/floor-plans" },
   { name: "Location", href: "/location" },
   { name: "Neighbourhood", href: "/neighbourhood" },
   { name: "FAQ", href: "/faq" },
-  { name: "Register", href: "/register" },
+  { name: "Register", href: "/register", highlight: true },
 ]
 
 export function Header() {
@@ -40,7 +40,11 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-sans text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className={
+                  item.highlight
+                    ? "font-sans text-sm font-semibold text-secondary hover:text-secondary/80 transition-colors"
+                    : "font-sans text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                }
               >
                 {item.name}
               </Link>
@@ -53,8 +57,8 @@ export function Header() {
               <Phone className="h-4 w-4" />
               <span className="sr-only">Call us</span>
             </Link>
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-sm">
-              <Link href="/register">Get Price List</Link>
+            <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-sans text-sm h-11 px-5">
+              <Link href="/register">Get price list</Link>
             </Button>
           </div>
 
@@ -81,14 +85,20 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="font-sans text-base font-medium text-foreground/80 hover:text-primary transition-colors"
+                  className={
+                    item.highlight
+                      ? "font-sans text-base font-semibold text-secondary"
+                      : "font-sans text-base font-medium text-foreground/80 hover:text-primary transition-colors"
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans w-full mt-4">
-                <Link href="/register">Get Price List</Link>
+              <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-sans w-full mt-4 h-12 text-base">
+                <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
+                  Get price list — Register
+                </Link>
               </Button>
             </div>
           </div>

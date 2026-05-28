@@ -45,7 +45,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-sans text-base px-8">
-              <Link href="/register">
+              <Link href="/#register">
                 Get Floor Plans & Price List
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -405,7 +405,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-base px-8">
-            <Link href="/register">
+            <Link href="/#register">
               Register Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

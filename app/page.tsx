@@ -8,13 +8,15 @@ import {
   LocationPreview,
   CTASection 
 } from "@/components/home-sections"
+import { QuickRegisterSection } from "@/components/quick-register-section"
 
 export default function HomePage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pb-20 md:pb-0">
         <HeroSection />
+        <QuickRegisterSection />
         <FactsGrid />
         <WhyRollingwood />
         <CollectionsPreview />

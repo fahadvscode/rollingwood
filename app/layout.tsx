@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { images } from '@/lib/images'
 import { siteUrl } from '@/lib/site'
+import { RegisterCtaBar } from '@/components/register-cta-bar'
 
 const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"],
@@ -133,6 +134,7 @@ export default function RootLayout({
       </head>
       <body className={`${cormorant.variable} ${montserrat.variable} font-serif antialiased`}>
         {children}
+        <RegisterCtaBar />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
