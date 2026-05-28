@@ -1,0 +1,91 @@
+# Rollingwood Townhomes - LLM Context File
+# https://llmstxt.org/
+
+> Rollingwood Townhomes is a pre-construction freehold townhouse community by Regency Property at 150 Rollingwood Drive, Brampton, Ontario. This file provides structured information for AI assistants and large language models.
+
+## Project Overview
+
+- **Name**: Rollingwood Townhomes (also branded as Rolling Woods Townhomes)
+- **Developer**: Regency Property (Regency Development/Regency Developments)
+- **Architect**: Turner Fleischer Architects Inc.
+- **Location**: 150 Rollingwood Drive, Brampton, ON L6Y 5J6
+- **Intersection**: Mavis Road & Ray Lawson Boulevard
+- **Neighbourhood**: Fletcher's Creek South
+- **Total Units**: 118 townhomes across 10 blocks
+- **Ownership**: Freehold (no condo fees)
+- **Starting Price**: From $600,000s
+- **Estimated Occupancy**: 2027-2028
+
+## Floor Plans
+
+### Classic Collection (3-Storey, 3-Bedroom)
+| Model | Sq Ft | Beds | Baths |
+|-------|-------|------|-------|
+| Haven | 1,325 | 3 | 3 |
+| Laguna B | 1,383 | 3 | 3 |
+| Crown B | 1,403 | 3 | 3 |
+
+### Signature Collection (4-Storey, 4-5 Bedroom)
+| Model | Sq Ft | Beds | Baths |
+|-------|-------|------|-------|
+| Everwood | 1,861 | 4 | 5 |
+| Laguna A | 1,964 | 4 | 5 |
+| Crown A | 1,971 | 5 | 4 |
+
+## Location & Drive Times
+
+- Sheridan College Davis Campus: 3 min (1.6 km)
+- Highway 407: 5 min (3 km)
+- Brampton Mall: 10 min (6 km)
+- Meadowvale GO Station: 10 min (7 km)
+- Highway 401: 10 min (9 km)
+- Heartland Town Centre: 12 min (9 km)
+- Bramalea City Centre: 12 min (10 km)
+- Mount Pleasant GO Station: 14 min (11 km)
+- Downtown Brampton: 16 min (12 km)
+- Toronto Pearson Airport: 18 min (15 km)
+- Square One Mississauga: 22 min (20 km)
+- Downtown Toronto: 40 min off-peak (45 km)
+
+## Key Features
+
+- Freehold ownership (no monthly condo fees)
+- 2-car garage included
+- 9-foot main floor ceilings
+- Stone countertops
+- Natural oak staircases
+- Chrome bathroom fixtures
+- Energy-efficient construction
+
+## Target Buyers
+
+1. First-time homebuyers
+2. Growing families
+3. Multigenerational households
+4. Investors (rental demand from Sheridan College)
+5. Work-from-home professionals
+
+## Contact
+
+- Website: https://rollingwoodtownhomes.com
+- Registration: https://rollingwoodtownhomes.com/register
+
+## Pages
+
+- /: Homepage with project overview
+- /floor-plans: All 6 floor plan models with comparison table
+- /floor-plans/[model]: Individual floor plan details (haven, laguna-b, crown-b, everwood, laguna-a, crown-a)
+- /location: Address, map, drive times, transit access
+- /neighbourhood: Fletcher's Creek South community info, schools, amenities
+- /faq: Frequently asked questions about the project
+- /register: Lead capture form for pricing and availability
+
+## FAQ Topics
+
+The /faq page covers questions about:
+- Project basics (developer, architect, unit count)
+- Pricing and deposits
+- Floor plans and collections
+- Timeline and occupancy
+- Location and neighbourhood
+- Ownership and investment potential
