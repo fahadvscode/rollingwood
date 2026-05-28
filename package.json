@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "upload-images": "node scripts/upload-to-supabase.mjs"
+    "download-images": "node scripts/download-images.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

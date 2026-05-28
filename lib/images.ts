@@ -1,44 +1,37 @@
-/** Public Supabase Storage URLs (no API keys). */
+/** Site-hosted image paths (served from /public). */
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? ""
-export const STORAGE_BUCKET = "rental-documents"
-
-export function storageUrl(path: string): string {
-  const normalized = path.replace(/^\//, "")
-  if (!SUPABASE_URL) {
-    throw new Error("Set NEXT_PUBLIC_SUPABASE_URL for image URLs")
-  }
-  return `${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${normalized}`
+function asset(path: string): string {
+  return `/${path.replace(/^\//, "")}`
 }
 
 export const images = {
-  logo: storageUrl("img/logo.svg"),
-  logoFooter: storageUrl("img/logo3.svg"),
-  regency: storageUrl("img/regency2.svg"),
-  og: storageUrl("og-image.jpg"),
+  logo: asset("img/logo.svg"),
+  logoFooter: asset("img/logo3.svg"),
+  regency: asset("img/regency2.svg"),
+  og: asset("og-image.jpg"),
   home: {
-    banner: storageUrl("img/home/banner2.webp"),
-    one: storageUrl("img/home/1.webp"),
-    two: storageUrl("img/home/2.webp"),
-    seven: storageUrl("img/home/7.webp"),
-    eight: storageUrl("img/home/8.webp"),
+    banner: asset("img/home/banner2.webp"),
+    one: asset("img/home/1.webp"),
+    two: asset("img/home/2.webp"),
+    seven: asset("img/home/7.webp"),
+    eight: asset("img/home/8.webp"),
   },
   interiors: {
-    one: storageUrl("img/interiors/1.webp"),
-    two: storageUrl("img/interiors/2.webp"),
-    three: storageUrl("img/interiors/3.webp"),
-    four: storageUrl("img/interiors/4.webp"),
+    one: asset("img/interiors/1.webp"),
+    two: asset("img/interiors/2.webp"),
+    three: asset("img/interiors/3.webp"),
+    four: asset("img/interiors/4.webp"),
     gallery: [
-      storageUrl("img/interiors/1.webp"),
-      storageUrl("img/interiors/2.webp"),
-      storageUrl("img/interiors/3.webp"),
-      storageUrl("img/interiors/4.webp"),
-      storageUrl("img/home/7.webp"),
-      storageUrl("img/home/8.webp"),
+      asset("img/interiors/1.webp"),
+      asset("img/interiors/2.webp"),
+      asset("img/interiors/3.webp"),
+      asset("img/interiors/4.webp"),
+      asset("img/home/7.webp"),
+      asset("img/home/8.webp"),
     ],
   },
   community: {
-    one: storageUrl("img/community/1.webp"),
-    two: storageUrl("img/community/2.webp"),
+    one: asset("img/community/1.webp"),
+    two: asset("img/community/2.webp"),
   },
 } as const
